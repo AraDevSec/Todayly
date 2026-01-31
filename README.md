@@ -1,4 +1,4 @@
-# WhatIsToday
+# Todayly
 
 A cron-friendly Bash script that fetches "What happened on this day" data
 from an external API and updates the Slack profile status.
@@ -41,7 +41,7 @@ sudo apt install curl jq
 
 
  
-# 日本語訳　WhatIsToday
+# 日本語訳　Todayly
 
 外部 API から「今日は何の日か」のデータを取得し、  
 Slack のプロフィールステータスを更新するための  

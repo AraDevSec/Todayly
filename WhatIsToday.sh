@@ -1,22 +1,15 @@
-!/bin/bash
+#!/bin/bash
 set -euo pipefail
 cd /home/ubuntu/Todayly
 SlackAPI=$(cat /home/ubuntu/.SlackAPI)
 export SlackAPI
 NOW=$(date '+%Y-%m-%d %H:%M:%S')
-
-
-
-
-
-
 MMDD=$(date +%m%d)
+
 URL="https://api.whatistoday.cyou/index.cgi/v3/anniv/${MMDD}"
 
 TodayAnniv=$(curl -sS "$URL" | jq -r --arg now "$NOW" \
   '"Test「\(.mmdd)」「\($now)」"')
-
-
 
 OAUTH_TOKEN=$SlackAPI
 
